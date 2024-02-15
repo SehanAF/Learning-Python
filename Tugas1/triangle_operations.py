@@ -1,12 +1,12 @@
 alas = float(input("Masukan angka alas: "))
 tinggi = float(input("Masukan angka tinggi: "))
 
-a = 20
-b = 12
-c = 10
+sisiA = 20
+sisiB = 12
+sisiC = 10
 
 rumusLuas = 1 / 2 * alas * tinggi
-rumusKeliling = a + b + c
+rumusKelilingSegitiga = sisiA + sisiB + sisiC
 
-print("hasil luas %.2f" % rumusLuas)
-print("hasil luas %.2f" % rumusKeliling)
+print("hasil luas %.0f" % rumusLuas)
+print("hasil keliling %.0f" % rumusKelilingSegitiga)
