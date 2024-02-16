@@ -1,6 +1,6 @@
-yearBirth = int(input("Masukan tahun lahir kamu: "))
+yearBorn = int(input("Masukan tahun lahir kamu: "))
 yearPresent = 2024
 
-yearDifference = yearPresent - yearBirth
+yearDifference = yearPresent - yearBorn
 
 print("Umur kamu sekarang adalah: ", yearDifference, "tahun.")
