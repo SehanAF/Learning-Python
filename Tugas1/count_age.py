@@ -3,4 +3,4 @@ yearPresent = 2024
 
 yearDifference = yearPresent - yearBorn
 
-print("Umur kamu sekarang adalah: " + str(yearDifference) + " tahun.")
+print(f"Umur kamu sekarang adalah: {yearDifference} tahun.")
