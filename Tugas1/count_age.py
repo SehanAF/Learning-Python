@@ -1,6 +1,13 @@
+import datetime
+
 year_born = int(input("Masukan tahun lahir kamu: "))
-year_present = 2024
+month_born = int(input("Masukan bulan lahir kamu: "))
+day_born = int(input("Masukan tanggal lahir kamu: "))
 
-year_difference = year_present - year_born
+now = datetime.datetime.now()
 
-print(f"Umur kamu sekarang adalah: {year_difference} tahun.")
+year_difference = now.year - year_born
+month_difference =  month_born - now.month
+day_difference = now.day - day_born
+
+print(f"Umur kamu sekarang adalah: {year_difference} tahun, {month_difference} bulan, dan {day_difference} hari.")
