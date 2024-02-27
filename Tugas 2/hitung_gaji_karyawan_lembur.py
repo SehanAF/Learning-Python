@@ -7,9 +7,9 @@ hari_libur_minggu = ("minggu")
 hari_libur_nasional = ("natal", "tahun baru")
 lembur_hari = 0
 
-uang_transport = 150.000
-uang_makan = 255.000
-tunjangan = 355.000
+uang_transport = 150_000
+uang_makan = 255_000
+tunjangan = 355_000
 
 gaji_pokok = float(input("Masukan gaji pokok anda: "))
 mencari_hari_lembur = input("Masukan hari lembur: ").lower()
@@ -27,7 +27,7 @@ elif mencari_hari_lembur in hari_libur_sabtu:
         lembur_hari = mencari_jam_lembur * 2 * (1/173) * gaji_pokok
     elif mencari_jam_lembur == 9:
         lembur_hari = mencari_jam_lembur * 3 * (1/173) * gaji_pokok
-    elif 10 <= mencari_jam_lembur <= 11:
+    elif 10 == mencari_jam_lembur <= 11:
         lembur_hari = mencari_jam_lembur * 4 * (1/173) * gaji_pokok
     else:
         print("Maaf anda mencapai batas jam lembur")
