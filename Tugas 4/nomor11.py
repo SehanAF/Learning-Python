@@ -8,31 +8,29 @@
 
 # Buatlah Program Questioner untuk mengakomodasi kasus diatas.
 
-jenis_kelamin = "perempuan"
-berat_badan = 46
-tinggi_badan = 175
-usia = 21
-nilai_akademis = 89
-cek_cacat = False
-cek_skill = "TIDAK ADA"
+cek_cacat = input("Apakah ada cacat? (ya/tidak): ").lower()
 
-if cek_cacat == True:
+if cek_cacat == "ya":
     print("Maaf kamu tidak lulus karena cacat.")
-       
-elif ((jenis_kelamin == "laki-laki" or jenis_kelamin == "perempuan") and (cek_skill == "Menembak" or cek_skill == "Memanah" or cek_skill == "Berkuda")):
-    print(f"Kamu lolos dengan jenis kelamin {jenis_kelamin}, karena kamu memiliki skill {cek_skill}.")
-    
-elif (jenis_kelamin == "perempuan" and (berat_badan >= 45 or berat_badan <= 50) and tinggi_badan >= 165 and (usia >= 15 or usia <= 20)):
-    print(f"Kamu lulus, dengan jenis kelamin {jenis_kelamin}, berat badan {berat_badan}, dan tingginya {tinggi_badan} dan usianya {usia} tahun.")
+    exit()
 
-elif ((jenis_kelamin == "laki-laki" or jenis_kelamin == "perempuan") and berat_badan <= 70 and tinggi_badan >= 170 and usia <= 25):
-    print(f"Kamu lulus, dengan jenis kelamin {jenis_kelamin}, berat badan {berat_badan} dan tinggIi {tinggi_badan} dan usianya {usia} tahun .")
+jenis_kelamin = input("Masukkan Jenis Kelamin (Laki-laki/Perempuan): ").lower()
+berat_badan = int(input("Masukkan Berat Badan: "))
+tinggi_badan = int(input("Masukan Tinggi Badan: "))
+usia = int(input("Masukkan Usia: "))
+nilai_akademis = int(input("Masukkan Nilai Akademis: "))
+cek_skill = input("Masukkan Skill: ").split()
 
-elif ((jenis_kelamin == "laki-laki" or jenis_kelamin == "perempuan") and nilai_akademis >= 90 and usia <= 30):
-    print(f"Kamu lulus, dengan jenis kelamin {jenis_kelamin}, karna nilai rata-rata akademis kamu {nilai_akademis} dan usia {usia} tahun.")
-     
+
+if any(skill in cek_skill for skill in ["Menembak", "Memanah", "Berkuda"]):
+    print(f"Kamu lolos Syarat no 4 dengan jenis kelamin {jenis_kelamin}, karena kamu memiliki skill {cek_skill}.")
+elif nilai_akademis >= 90 and usia <= 30:
+    print(f"Kamu lulus Syarat nomor 3 dengan jenis kelamin {jenis_kelamin}, karena nilai rata-rata akademismu {nilai_akademis} dan usia {usia} tahun.")
+elif jenis_kelamin == "perempuan" and 45 <= berat_badan <= 50 and tinggi_badan >= 165 and 15 <= usia <= 20:
+    print(f"Kamu lulus Syarat nomor 1 yaitu dengan jenis kelamin {jenis_kelamin}, berat badan {berat_badan}, tingginya {tinggi_badan}, dan usianya {usia} tahun.")
+elif jenis_kelamin == "laki-laki" and berat_badan <= 70 and tinggi_badan >= 170 and usia <= 25:
+    print(f"Kamu lulus Syarat nomor 2, dengan jenis kelamin {jenis_kelamin}, berat badan {berat_badan}, tingginya {tinggi_badan}, dan usianya {usia} tahun.")
 else:
-    print("Maaf kamu tidak lolos")
-
+    print("Maaf kamu tidak lolos karena tidak memenuhi beberapa syarat.")
     
     
