@@ -1,4 +1,4 @@
-# Tuliskan program untuk menentukan bilangan itu bilangan positif, negatif atau 0
+
 
 a = 15
 b = 15
